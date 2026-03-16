@@ -1,0 +1,2 @@
+patient_id,label,ph0,ph1,ph2,ph3
+case101,0,volumes/case101_ph0.npy,volumes/case101_ph1.npy,volumes/case101_ph2.npy,volumes/case101_ph3.npy
