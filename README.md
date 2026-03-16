@@ -1,21 +1,21 @@
-# CoPAS-STMRI (Co-Plane Attention for Sequential MRI)
+# TRUST (sTILS-TSR unification system)
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)]()
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ## Project Overview
 
-**Full name:** CoPAS-STMRI (Co-Plane Attention for Sequential MRI)  
-**Abbreviation:** STMRI  
-**One-line description:** STMRI is a multi-phase MRI modeling framework for medical image representation learning and lesion-related prediction/reconstruction tasks.
+**Full name:** TRUST (sTILS-TSR unification system)  
+**Abbreviation:** TRUST  
+**One-line description:** TRUST is a medical imaging framework for unified sTILS/TSR representation learning, prediction, and analysis.
 
-This repository is a cleaned open-source package derived from the CoPAS research codebase.  
-The core model is `STMRI` in `main/model/model_my.py`.
+This repository is a cleaned open-source package for TRUST.  
+The core model is `TRUST` in `main/model/model_my.py`.
 
 ## News / Updates
 
-- **2026-03-16**: Initial open-source release with cleaned STMRI training/inference pipeline.
-- **2026-03-16**: Added dual dataset format support (`npy_table` and CoPAS-like `long_table`).
+- **2026-03-16**: Initial open-source release with cleaned TRUST training/inference pipeline.
+- **2026-03-16**: Added dual dataset format support (`npy_table` and TRUST-style `long_table`).
 
 ## Installation
 
@@ -50,7 +50,7 @@ patient_id,label,ph0,ph1,ph2,ph3
 case001,1,volumes/case001_ph0.npy,volumes/case001_ph1.npy,volumes/case001_ph2.npy,volumes/case001_ph3.npy
 ```
 
-### Format B: `long_table` (closer to original CoPAS table)
+### Format B: `long_table` (TRUST-style table)
 
 Required columns (default names):
 - `姓名` (patient id)
@@ -82,7 +82,7 @@ All runtime arguments are managed in `main/run/Args.py` and overridable from CLI
 python run.py   --data_format npy_table   --train_csv data/sample_train_npy.csv   --valid_csv data/sample_valid_npy.csv   --data_root data   --experiment_name stmri_exp1   --class_num 2   --epochs 50   --batch_size 2   --lr 5e-5
 ```
 
-### Train (`long_table`, CoPAS-like)
+### Train (`long_table`, TRUST-style)
 
 ```bash
 python run.py   --data_format long_table   --train_csv data/train_long.csv   --valid_csv data/valid_long.csv   --data_root data
@@ -126,7 +126,7 @@ CoPAS_OpenSource/
     ├── data/
     │   └── datasets.py
     ├── model/
-    │   ├── model_my.py          # STMRI core model
+    │   ├── model_my.py          # TRUST core model
     │   ├── ResNet3D.py
     │   ├── kan.py
     │   └── otk/
@@ -144,7 +144,7 @@ CoPAS_OpenSource/
 If you find this project useful, please cite your corresponding paper version:
 
 ```bibtex
-@article{copas_stmri_2026,
+@article{trust_2026,
   title   = {<TO_BE_FILLED>},
   author  = {<TO_BE_FILLED>},
   journal = {<TO_BE_FILLED>},
